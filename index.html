@@ -621,6 +621,18 @@
             </div>
         </div>
     </div>
+    <div id="visitor-counter" style="margin-top: 15px; font-weight: bold;">
+    👥 Visitors: <span id="count">0</span>
+</div>
+
+<script>
+    fetch('https://api.countapi.xyz/hit/udhay.tech/visits')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('count').textContent = data.value;
+        });
+</script>
+
 </section>
 
 <!-- Footer -->
